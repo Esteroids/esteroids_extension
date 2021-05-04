@@ -63,3 +63,6 @@ The plugin contains some extra features, such as a popup window that helps the u
 
 # Contact
 Write us at contact@esteroids.xyz or via [our Twitter](https://twitter.com/e_steroids).
+
+# Remarks
+Esteroids was forked from Almonit Browser Extension (MIT license) in commit 81ebce02743b0351d3df0cee6d10a83f4ba19401.

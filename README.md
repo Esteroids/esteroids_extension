@@ -1,19 +1,15 @@
-<<<<<<< HEAD
-# Almonit plugin
-A Dwebsites (decentralized websites) browser extension by Almonit
-=======
-# almonit_plugin
-This is an effort to add decentralized ID to the Almonit plugin.
->>>>>>> Update README.md
+# Esteroids plugin
+A dWebsites (decentralized websites) browser extension by Esteroids
+
 
 # Description
-Almonit is a browser extension for Dwebsites.
+Esteroids is a browser extension for dWebsites.
 
 Traditional websites use a server and a name service (DNS) to be accessible. Decentralized websites replace the server with a decentralized storage, and the name service with a decentralized name service.
 
-Almonit browser extension let users access Dwebsites through the browser. The extension focuses on IPFS and Skynet as a decentralized storage, and ENS as a decentralized name service. 
+Esteroids browser extension let users access dWebsites through the browser. The extension focuses on IPFS and Skynet as a decentralized storage, and ENS as a decentralized name service. 
 
-For more information read our [introduction to Dwebsites](http://blog.almonit.eth/Introduction_to_Dwebsitse.html) article. The [how it works](#how-it-works) section in this README gives a more technical description.
+For more information read our [introduction to dWebsites](http://blog.almonit.eth/Introduction_to_Dwebsitse.html) article. The [how it works](#how-it-works) section in this README gives a more technical description.
 
 # Installation 
 ## From source code
@@ -35,24 +31,17 @@ In Firefox, enter `about:debugging`.
 Choose `Load Temporary Add-on...`
 
 From the folder of the plugin, choose `manifest.json`
-<<<<<<< HEAD
 
 #### Chrome installation (after compilation)
 See instructions [here](https://thoughtbot.com/blog/how-to-make-a-chrome-extension#load-your-extension-into-chrome).
 
-## Installation from extension store
-
-- Firefox: https://addons.mozilla.org/en-GB/firefox/addon/almonit/
-- Chrome, Opera, Brave: https://chrome.google.com/webstore/detail/almonit/adobfkcnfkodjfobnndpfipdanhdcafm
-- Edge: https://giphy.com/gifs/jk-just-kidding-messin-3ohhwpVt8pe3Kdm5nW/fullscreen
-
 # Usage
 Navigate to ENS+IPFS and ENS+Skynet websites such as:
-- http://almonit.eth
-- http://dxdao.eth
-- http://skypages.dwbst.eth
+- https://esteroids.eth
+- https://dxdao.eth
+- https://skypages.dwbst.eth
 
-See full list in the [Almonit Search Engine](http://almonit.eth/).
+See full list in the [Esteroids dWebsites Explorer](http://esteroids.eth/).
 
 
 # How it works
@@ -73,6 +62,4 @@ The plugin contains some extra features, such as a popup window that helps the u
 - Anonymous update of IPFS and Skynet gatewys list. The update is being done via [update.extension.almonit.eth](https://update.extension.almonit.eth). This way users get updates in an anonymous way without directly communicating with us.
 
 # Contact
-Write us at contact@almonit.club or via [our Twitter](https://twitter.com/GoAlmonit).
-=======
->>>>>>> Update README.md
+Write us at contact@esteroids.xyz or via [our Twitter](https://twitter.com/e_steroids).

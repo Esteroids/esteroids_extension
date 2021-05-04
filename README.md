@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # Almonit plugin
 A Dwebsites (decentralized websites) browser extension by Almonit
+=======
+# almonit_plugin
+This is an effort to add decentralized ID to the Almonit plugin.
+>>>>>>> Update README.md
 
 # Description
 Almonit is a browser extension for Dwebsites.
@@ -30,6 +35,7 @@ In Firefox, enter `about:debugging`.
 Choose `Load Temporary Add-on...`
 
 From the folder of the plugin, choose `manifest.json`
+<<<<<<< HEAD
 
 #### Chrome installation (after compilation)
 See instructions [here](https://thoughtbot.com/blog/how-to-make-a-chrome-extension#load-your-extension-into-chrome).
@@ -68,3 +74,5 @@ The plugin contains some extra features, such as a popup window that helps the u
 
 # Contact
 Write us at contact@almonit.club or via [our Twitter](https://twitter.com/GoAlmonit).
+=======
+>>>>>>> Update README.md

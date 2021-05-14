@@ -1,5 +1,4 @@
 :root {
-	--color-almonit: #cfaf4e;
 	--color-primary: #0078e7;
 	--color-border: #cdcdcd;
 	--color-white: #f9f9f9;
@@ -8,7 +7,7 @@
 html,
 body {
 	width: 300px;
-	height: 280px;
+	height: 180px;
 	overflow: hidden;
 	box-sizing: border-box;
 }
@@ -214,4 +213,8 @@ footer > button {
 footer > button:active {
 	background: white;
 	color: #0070d8;
+}
+
+.discover {
+	font-size: 8pt;
 }

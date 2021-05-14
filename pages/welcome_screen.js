@@ -1,5 +1,5 @@
-document.getElementById("searchEngine").addEventListener("click", function () {
-  window.location.replace("http://almonit.eth");
+document.getElementById("esteroids_eth").addEventListener("click", function () {
+  window.location.replace("http://esteroids.eth");
 });
 document
   .getElementById("introductionToDwebsitesArticle")
@@ -9,6 +9,3 @@ document
     );
   });
 
-document.body.addEventListener("animationend", function () {
-  document.body.style.overflow = "scroll";
-});

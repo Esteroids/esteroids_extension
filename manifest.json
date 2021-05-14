@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Almonit",
-  "version": "0.1.4",
-  "author": "Almonit",
+  "name": "Esteroids",
+  "version": "0.0.2",
+  "author": "Esteroids",
   "description": "Extension for decentralized websites",
-  "homepage_url": "https://almonit.eth",
+  "homepage_url": "https://esteroids.eth",
   "icons": {
-    "48": "icons/almonit-48.png"
+    "48": "icons/esteroids-48.png"
   },
 
   "background": {
@@ -15,6 +15,8 @@
       "js/check-browser.js",
       "js/promisify.js",
       "js/multihashes-min.js",
+      "js/content-hash.js",
+      "js/base58.js",
       "js/web3-wrapper/dist/main.js",
       "js/socket.io.js",
       "js/gateways.js",
@@ -61,8 +63,8 @@
   },
 
   "browser_action": {
-    "default_icon": "icons/almonit-32.png",
-    "default_title": "Almonit",
-    "default_popup": "popup/almonit_popup.html"
+    "default_icon": "icons/esteroids-32.png",
+    "default_title": "Esteroids",
+    "default_popup": "popup/esteroids_popup.html"
   }
 }

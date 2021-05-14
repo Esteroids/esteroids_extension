@@ -60,7 +60,9 @@ function handleRequestComplete(e) {
   let statusDigit = ("" + e.statusCode)[0];
   if (checkforUpdates && statusDigit == 2 && autoGatewaysUpdate) {
     let [domain, path] = urlDomain(e.url);
-    initSettingsUpgrade(domain);
+    
+    // Comment out to disable "automatic settings update"
+    // initSettingsUpgrade(domain);
   }
 
   return { responseHeaders: e.responseHeaders };

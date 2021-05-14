@@ -22,7 +22,7 @@ async function RDNtoDS(domain, path) {
         var address = await WEB3ENS.getContenthash(domain);
 
         if (address !== "0x")
-          var redirect = await handleENSContenthash(address, domain, path);
+          var redirect = await redirectENStoIPFS(address, domain, path);
         else var redirect = await getSkynet(domain, path);
       } catch (e) {
         var redirect = notFound(domain, e);
@@ -46,7 +46,7 @@ async function RDNtoDS(domain, path) {
         var address = await WEB3ENS.getContenthashTestnet(domain);
 
         if (address !== "0x")
-          var redirect = await handleENSContenthash(address, domain, path);
+          var redirect = await redirectENStoIPFS(address, domain, path);
         else var redirect = notFound(domain, e);
       } catch (e) {
         var redirect = notFound(domain, e);
@@ -56,15 +56,32 @@ async function RDNtoDS(domain, path) {
   return redirect;
 }
 
-function handleENSContenthash(address, ensDomain, ensPath) {
-  return redirectENStoIPFS(address.slice(14), ensDomain, ensPath);
-}
-
 // create IPFS link and redicrect to it
-function redirectENStoIPFS(hex, ensDomain, ensPath) {
-  let ipfsHash = hextoIPFS(hex);
+function redirectENStoIPFS(address, ensDomain, ensPath) {
+  const codec = contentHash.getCodec(address);
+  let ipfsHash = contentHash.decode(address);
+  let protocol = "";
+
+  switch (codec) {
+    case "ipfs-ns":
+      protocol = "/ipfs/";
+      break;
+    case "ipns-ns":
+      protocol = "/ipns/";
+
+      // if it's a human-readable name and and not IPFS CID
+      if (ipfsHash.substring(0,2) !== 'Qm') {
+        arraybuffer_ipns_name = Base58.decode(ipfsHash);
+        var enc = new TextDecoder("utf-8");
+        ipfsHash = enc.decode(arraybuffer_ipns_name).substring(2);
+      }
+      break;
+    default:
+      throw "protocol unknown";
+  }
+
   let ipfsAddress =
-    ipfsGateways.currentGateway.address + "/ipfs/" + ipfsHash + ensPath;
+    ipfsGateways.currentGateway.address + protocol + ipfsHash + ensPath;
 
   localENS[ipfsHash] = ensDomain;
 
@@ -113,18 +130,6 @@ function redirectENStoSkynet(CID, ensDomain, ensPath) {
     },
     err
   );
-}
-
-function getENSContent(ensDomain, ensPath) {
-  return WEB3ENS.getContent(ensDomain).then(function (content) {
-    return handleENSContent(content, ensDomain, ensPath);
-  }, notFound.bind(null, ensDomain));
-}
-
-function handleENSContent(hex, ensDomain, ensPath) {
-  if (hex.slice(0, 2) == "0x")
-    return redirectENStoIPFS(hex.slice(2), ensDomain, ensPath);
-  else return err("ENS content exist but does not point to an IPFS address");
 }
 
 function hextoIPFS(hex) {

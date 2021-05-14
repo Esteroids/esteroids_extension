@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
   text-align: center;
+  background: linear-gradient(rgba(197, 176, 232, 0.4) , rgba(197, 176, 232, 0.2));
 }
 
 center {
@@ -30,7 +31,7 @@ center {
   margin: 0 10px;
 }
 
-.almonit-song {
+.esteroids-shower {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,8 +45,7 @@ center {
   color: #424242;
 }
 
-.almonit-song__img {
-  width: 150px;
+.esteroids_rain_img {
   margin: 21px 0;
   filter: drop-shadow(1px 10px 2px #808080);
 }

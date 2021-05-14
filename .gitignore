@@ -3,4 +3,5 @@ js/web3-wrapper/package-lock.json
 js/web3-wrapper/dist
 socket.io-server
 web-ext-artifacts
+.web-extension-id
 .DS_Store

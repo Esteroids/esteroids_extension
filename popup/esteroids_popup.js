@@ -1,6 +1,3 @@
-const SearchBtn = document.getElementById("SearchBtn");
-var searchInput = document.getElementById("SearchInput");
-
 if (!isFirefox) {
   window.addEventListener("click", function (e) {
     if (e.target.parentElement.href !== undefined) {
@@ -10,25 +7,6 @@ if (!isFirefox) {
       });
     }
   });
-}
-
-SearchBtn.addEventListener("click", search);
-
-searchInput.addEventListener("keyup", function (event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    search();
-    event.preventDefault();
-  }
-});
-
-function search(event) {
-  event.preventDefault();
-  browser.tabs.create({
-    url: `https://almonit.eth/#/results/?q=${searchInput.value}`,
-  });
-
-  searchInput.value = "";
 }
 
 let getSettings = promisify(browser.storage.local, "get", ["settings"]);

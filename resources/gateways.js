@@ -8,30 +8,15 @@ var gatewaysDataJSON = `{
   },
   
   "ipfsGateways": {
-    "ipfs.io": {
-      "key": "ipfs.io",
-      "name": "Ipfs",
-      "address": "https://ipfs.io"
+    "cf-ipfs.com": { 
+      "key": "cf-ipfs.com",
+      "name": "Cf-ipfs",
+      "address": "https://cf-ipfs.com"
     },
-    "ipfs.infura.io": { 
-      "key": "ipfs.infura.io",
-      "name": "Infura",
-      "address": "https://ipfs.infura.io"
-    } ,
-    "cloudflare-ipfs.com": { 
-      "key": "cloudflare-ipfs.com",
-      "name": "Cloudflare",
-      "address": "https://cloudflare-ipfs.com"
-    },
-    "gateway.pinata.cloud": { 
-      "key": "gateway.pinata.cloud",
-      "name": "Pinata",
-      "address": "https://gateway.pinata.cloud"
-    },
-    "ipfs.sloppyta.co": {
-      "key": "ipfs.sloppyta.co",
-      "name": "Sloppyta.co",
-      "address": "https://ipfs.sloppyta.co"
+    "astyanax.io": {
+      "key": "astyanax.io",
+      "name": "Astyanax",
+      "address": "https://astyanax.io"
     },
     "dweb.link": {
       "key": "dweb.link",

@@ -3,17 +3,16 @@ var Web3 = require('web3-eth');
 var web3 = '';
 var web3Testnet = '';
 
-//var web3 = new Web3("https://mainnet.infura.io/v3/4ff76c15e5584ee4ad4d0c248ec86e17");
+var web3 = new Web3.Eth("https://mainnet.infura.io/v3/6db5e33d6c914e68aa62bb7120213443");
 //const web3 = new Web3("http://localhost:8545");
 
-//web3.eth.ens.getContent("almonit.eth").then(function(add) {console.log(add);});
+//web3.eth.ens.getContent("esteroids.eth").then(function(add) {console.log(add);});
 
 
 // var web3 = new Web3("https://rinkeby.infura.io/v3/4ff76c15e5584ee4ad4d0c248ec86e17");
 // // const web3 = new Web3("http://localhost:8545");
 
-// web3.eth.ens.getContenthash("almonit.test").then(function(add) {console.log(add);});
-
+ // web3.ens.getContenthash("esteroids").then(function(add) {console.log(add);});
 
 module.exports = {
 	// Mainnet functions

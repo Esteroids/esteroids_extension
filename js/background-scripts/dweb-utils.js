@@ -69,12 +69,13 @@ function redirectENStoIPFS(address, ensDomain, ensPath) {
     case "ipns-ns":
       protocol = "/ipns/";
 
-      // if it's a human-readable name and and not IPFS CID
-      if (ipfsHash.substring(0,2) !== 'Qm') {
-        arraybuffer_ipns_name = Base58.decode(ipfsHash);
-        var enc = new TextDecoder("utf-8");
-        ipfsHash = enc.decode(arraybuffer_ipns_name).substring(2);
-      }
+      // if it's a human-readable name and and not IPFS CID 
+      // (COMMENTED OUT -- because some IPNS links don't begin with 'QM')
+      // if (ipfsHash.substring(0,2) !== 'Qm') {
+      //   arraybuffer_ipns_name = Base58.decode(ipfsHash);
+      //   var enc = new TextDecoder("utf-8");
+      //   ipfsHash = enc.decode(arraybuffer_ipns_name).substring(2);
+      // }
       break;
     default:
       throw "protocol unknown";

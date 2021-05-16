@@ -56,7 +56,7 @@ The core functionality of the plugin is to forward .eth addresses to IPFS or Sky
 The plugin contains some extra features, such as a popup window that helps the user discover decentralized websites. See [#features](features) for full details.
 
 # Features
-- Plugin popup: helps you explore ENS+IPFS websites
+- Supports ENS, IPNS, IPNS and Skynet technologies.
 - Decentralization via randomality: the plugin chooses each time a random IPFS and Skynet gateways (that's a way of avoiding everyone using the same gateway all the time, and hence indirectly cause centralization).
 - Settings page offers (almost) full customization.
 - Anonymous update of IPFS and Skynet gatewys list. The update is being done via [update.extension.almonit.eth](https://update.extension.almonit.eth). This way users get updates in an anonymous way without directly communicating with us.

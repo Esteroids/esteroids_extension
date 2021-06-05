@@ -69,13 +69,13 @@ function redirectENStoIPFS(address, ensDomain, ensPath) {
     case "ipns-ns":
       protocol = "/ipns/";
 
-      // if it's a human-readable name and and not IPFS CID 
-      // (COMMENTED OUT -- because some IPNS links don't begin with 'QM')
-      // if (ipfsHash.substring(0,2) !== 'Qm') {
-      //   arraybuffer_ipns_name = Base58.decode(ipfsHash);
-      //   var enc = new TextDecoder("utf-8");
-      //   ipfsHash = enc.decode(arraybuffer_ipns_name).substring(2);
-      // }
+      // Chcek if ipns is DNSLink, by checking if the Base58 version starts
+      // with \u0000\u000f (empirically it seems to imply DNSLink)
+      arraybuffer_ipns_name = Base58.decode(ipfsHash);
+      var enc = new TextDecoder("utf-8");
+      ipfsHashBase58 = enc.decode(arraybuffer_ipns_name);
+      if (ipfsHashBase58.substring(0,2) == "\u0000\u000f")
+        ipfsHash = ipfsHashBase58.substring(2);
       break;
     default:
       throw "protocol unknown";

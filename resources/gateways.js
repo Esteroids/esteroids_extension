@@ -22,6 +22,11 @@ var gatewaysDataJSON = `{
       "key": "dweb.link",
       "name": "Dweb.link",
       "address": "https://dweb.link"
+    },
+    "bluelight.link": {
+      "key": "bluelight.link",
+      "name": "bluelight.link",
+      "address": "https://bluelight.link"
     }
   },
 
